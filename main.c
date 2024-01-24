@@ -26,34 +26,34 @@ int main() {
     
 
     // Print Armstrong numbers
-    printf("The Armstrong numbers are: ");
+    printf("The Armstrong numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isArmstrong(i)==1) {
-            printf("%d ", i);
+            printf(" %d", i);
         }
     }
 
     // Print Palindrome numbers
-    printf("\nThe Palindromes are: ");
+    printf("\nThe Palindromes are:");
     for (int i = num1; i <= num2; ++i) {
         if (isPalindrome(i)==1) {
-            printf("%d ", i);
+            printf(" %d", i);
         }
     }
 
     // Print prime numbers
-    printf("\nThe Prime numbers are: ");
+    printf("\nThe Prime numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isPrime(i)==1) {
-            printf("%d ", i);
+            printf(" %d ", i);
         }
     }
 
     // Print Strong numbers
-    printf("\nThe Strong numbers are: ");
+    printf("\nThe Strong numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isStrong(i)==1) {
-            printf("%d ", i);
+            printf(" %d ", i);
         }
     }
 
