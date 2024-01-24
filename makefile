@@ -17,7 +17,6 @@ loopd: libclassloops.so
 #make the libraries:
 libclassloops.a: $(OB_LOOP)
 	$(AR) rcu libclassloops.a $(OB_LOOP)
-	ranlib libclassloops.a
 
 libclassrec.a: $(OB_REC)
 	$(AR) rcu libclassrec.a $(OB_REC)
