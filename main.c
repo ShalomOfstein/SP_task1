@@ -40,9 +40,10 @@ int main() {
             printf("%d ", i);
         }
     }
-    
+
     // Print prime numbers
-        for (int i = num1; i <= num2; ++i) {
+    printf("\n The Prime numbers are: ");
+    for (int i = num1; i <= num2; ++i) {
         if (isPrime(i)==1) {
             printf("%d ", i);
         }
