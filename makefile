@@ -5,7 +5,7 @@ OB_LOOP = basicClassification.o advancedClassificationLoop.o
 OB_REC = basicClassification.o advancedClassificationRecursion.o
 
 #compile and link all the files
-all: loops recursives recursived loopd mains maindloop maindrec
+all: loopd loops recursives recursived  mains maindloop maindrec
 
 #compile the libraries
 loops: libclassloops.a
@@ -16,10 +16,12 @@ loopd: libclassloops.so
 
 #make the libraries:
 libclassloops.a: $(OB_LOOP)
-	$(AR) rcs libclassloops.a $(OB_LOOP)
+	$(AR) rcu libclassloops.a $(OB_LOOP)
+	ranlib $@
 
 libclassrec.a: $(OB_REC)
-	$(AR) rcs libclassrec.a $(OB_REC)
+	$(AR) rcu libclassrec.a $(OB_REC)
+	ranlib $@
 
 libclassesrec.so: $(OB_REC)
 	$(CC) -shared -o libclassesrec.so $(OB_REC)
