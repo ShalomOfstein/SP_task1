@@ -45,7 +45,7 @@ int main() {
     printf("\nThe Prime numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isPrime(i)==1) {
-            printf(" %d ", i);
+            printf(" %d", i);
         }
     }
 
@@ -53,7 +53,7 @@ int main() {
     printf("\nThe Strong numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isStrong(i)==1) {
-            printf(" %d ", i);
+            printf(" %d", i);
         }
     }
 
