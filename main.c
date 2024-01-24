@@ -6,10 +6,10 @@ int main() {
     // Get two positive numbers from the user
     int num1, num2;
     
-    printf("Enter the first positive number: ");
+    // printf("Enter the first positive number: ");
     scanf("%d", &num1);
 
-    printf("Enter the second positive number: ");
+    // printf("Enter the second positive number: ");
     scanf("%d", &num2);
 
     // Validate input
@@ -26,7 +26,7 @@ int main() {
     
 
     // Print Armstrong numbers
-    printf("\nThe Armstrong numbers are:");
+    printf("The Armstrong numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isArmstrong(i)==1) {
             printf(" %d", i);
