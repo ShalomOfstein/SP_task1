@@ -3,8 +3,10 @@
 will return 1 if the number is a prime nuber
 */
 int isPrime(int num){
-    if(num<2) return 0; //check the number is bigger than (or equal to) 2
-    if((num%2==0)&&(num!=2)) return 0; //if the number is not 2 but divisible by 2 than it is not a prime
+    if(num<=0) return 0;
+    if(num==1) return 1;
+    if(num==2) return 1; //check the number is bigger than (or equal to) 2
+    if(num%2==0)return 0; //if the number is not 2 but divisible by 2 than it is not a prime
     for( int i =3 ; i*i <= num ; i=i+2 ){
         if(num%i==0){
             return 0;
