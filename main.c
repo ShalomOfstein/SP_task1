@@ -23,36 +23,39 @@ int main() {
         num1 = num2;
         num2 = temp;
     }
-    // Print prime numbers
-        for (int i = num1; i <= num2; ++i) {
-        if (isPrime(i)) {
-            printf("%d ", i);
-        }
-    }
+    
 
     // Print Armstrong numbers
-    printf("\n");
+    printf("\n The Armstrong numbers are: ");
     for (int i = num1; i <= num2; ++i) {
-        if (isArmstrong(i)) {
-            printf("%d ", i);
-        }
-    }
-
-    // Print Strong numbers
-    printf("\n");
-    for (int i = num1; i <= num2; ++i) {
-        if (isStrong(i)) {
+        if (isArmstrong(i)==1) {
             printf("%d ", i);
         }
     }
 
     // Print Palindrome numbers
-    printf("\n");
+    printf("\n The Palindromes are: ");
     for (int i = num1; i <= num2; ++i) {
-        if (isPalindrome(i)) {
+        if (isPalindrome(i)==1) {
             printf("%d ", i);
         }
     }
+    
+    // Print prime numbers
+        for (int i = num1; i <= num2; ++i) {
+        if (isPrime(i)==1) {
+            printf("%d ", i);
+        }
+    }
+
+    // Print Strong numbers
+    printf("\n The Strong numbers are: ");
+    for (int i = num1; i <= num2; ++i) {
+        if (isStrong(i)==1) {
+            printf("%d ", i);
+        }
+    }
+
     printf("\n");
     return 0; // Exit successfully
 }

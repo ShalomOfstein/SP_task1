@@ -21,11 +21,11 @@ int digits(int num) {
 }
 
 //recursive helper function to calculate if a number is an armstrong number
-int isArmstrongRec(int num, int original, int dig){
+int isArmstrongRec(int num, int dig){
     if (num==0) return 0;
     else{
         int r = num % 10;
-        return power(r, dig) + isArmstrongRec(num / 10, original, dig);
+        return power(r, dig) + isArmstrongRec(num/10, dig);
     }
 }
 
@@ -34,8 +34,11 @@ will return 1 if the number is an armstrong number.
 uses a the helper function to solve
 */
 int isArmstrong(int num){
+    if(num<=0) return 0;
     int dig = digits(num);
-    int result = isArmstrongRec(num, num, dig);
+    if(isArmstrongRec(num, dig)==num) return 1;
+    else{return 0;}
+
 }
 
 /*
