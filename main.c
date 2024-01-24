@@ -26,7 +26,7 @@ int main() {
     
 
     // Print Armstrong numbers
-    printf("The Armstrong numbers are:");
+    printf("\nThe Armstrong numbers are:");
     for (int i = num1; i <= num2; ++i) {
         if (isArmstrong(i)==1) {
             printf(" %d", i);
