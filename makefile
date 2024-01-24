@@ -16,10 +16,10 @@ loopd: libclassloops.so
 
 #make the libraries:
 libclassloops.a: $(OB_LOOP)
-	$(AR) rcu libclassloops.a $(OB_LOOP)
+	$(AR) rcs libclassloops.a $(OB_LOOP)
 
 libclassrec.a: $(OB_REC)
-	$(AR) rcu libclassrec.a $(OB_REC)
+	$(AR) rcs libclassrec.a $(OB_REC)
 
 libclassesrec.so: $(OB_REC)
 	$(CC) -shared -o libclassesrec.so $(OB_REC)
