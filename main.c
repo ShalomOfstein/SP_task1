@@ -6,10 +6,10 @@ int main() {
     // Get two positive numbers from the user
     int num1, num2;
     
-    // printf("Enter the first positive number: ");
+    printf("Enter the first positive number: ");
     scanf("%d", &num1);
 
-    // printf("Enter the second positive number: ");
+    printf("Enter the second positive number: ");
     scanf("%d", &num2);
 
     // Validate input
