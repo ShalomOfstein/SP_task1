@@ -1,6 +1,7 @@
 CC = gcc
 AR = ar
-FLAGS = -Wall
+FLAG = -Wall
+FLAGS = -Wall -fPIC
 OB_LOOP = basicClassification.o advancedClassificationLoop.o
 OB_REC = basicClassification.o advancedClassificationRecursion.o
 
@@ -32,13 +33,13 @@ libclassloops.so: $(OB_LOOP)
 
 #compile the different mains
 mains: main.o libclassrec.a
-	$(CC) $(FLAGS) -o mains main.o libclassrec.a
+	$(CC) $(FLAG) -o mains main.o libclassrec.a
 
 maindloop: main.o libclassloops.so
-	$(CC) $(FLAGS) -o maindloop main.o ./libclassloops.so
+	$(CC) $(FLAG) -o maindloop main.o ./libclassloops.so
 
 maindrec: main.o libclassesrec.so
-	$(CC) $(FLAGS) -o maindrec main.o ./libclassesrec.so
+	$(CC) $(FLAG) -o maindrec main.o ./libclassesrec.so
 
 
 #make the object files
@@ -52,7 +53,7 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c -o advancedClassificationLoop.o
 
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
-	$(CC) $(FLAGS) -c advancedClassificationRecursion.c -o advancedClassificationRecursion.o
+	$(CC) $(FLAGS)  -c advancedClassificationRecursion.c -o advancedClassificationRecursion.o
 
 
 #to ensure that there isnt a "clean"/"all" file in the directory
